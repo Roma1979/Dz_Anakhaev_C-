@@ -13,18 +13,24 @@ namespace HelloApp
             Console.WriteLine("Введите третьe число: ");
             int num3 = Convert.ToInt32(Console.ReadLine());
  
-            if(num1 > num2)
-            if(num1 > num3)
+            if(num1 > num2) 
+                if(num1 > num3)
             {
-                Console.WriteLine("Первое число больше второго и третьго");
+                    Console.WriteLine("Первое число больше второго и третьго");
             }
-            else if (num1 < num2)
+            if (num2 > num3)
+            
             {
-                Console.WriteLine("Первое число меньше второго");
+                Console.WriteLine("Второе число больше третьго и первого");
             }
-            else
+            
+            else if (num2 < num3)
             {
-                Console.WriteLine("Оба числа равны");
+                Console.WriteLine("Третье число больше первого и второго");
+            }
+             else
+            {
+                Console.WriteLine("Числа равны");
             }
             Console.ReadKey();
         }
