@@ -1,0 +1,18 @@
+List<int> numbers = new List<int>();
+Random rnd = new Random();
+int min=2, max=100;
+while (numbers.Count != 50)
+{
+    int n = rnd.Next(min, max+1);
+    if (!numbers.Contains(n) && n%2==0)
+    {
+        numbers.Add(n);
+        if (n == min) min += 2;
+        if (n == max) max -= 2;
+    }
+}
+numbers.Sort();
+foreach (var n in numbers)
+{
+    Console.WriteLine(n);
+}
