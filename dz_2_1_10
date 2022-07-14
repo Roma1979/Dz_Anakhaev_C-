@@ -1,0 +1,10 @@
+using System;
+ 
+class Program {
+    static void Main(string[] args) {
+        Console.WriteLine("Введите целое трехзначное число : ");
+            string num1 = Console.ReadLine();
+                Console.WriteLine(num1[1]);
+                
+            }
+}   
