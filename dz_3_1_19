@@ -1,0 +1,31 @@
+  
+using System;
+using System.IO;
+using System.Linq;
+ 
+namespace ConsoleApplication1
+{
+    class Program
+    {
+ 
+        static bool IsPalindrome(string str)
+        {
+            return str == new string(str.Reverse().ToArray());
+        }
+ 
+        static void Main()
+        {
+            const string filePath = "result.txt";
+            Console.Write("Введи пятизначное число: ");
+            var str = Console.ReadLine();
+            var result = IsPalindrome(str);
+            var message = "Число '" + str + "' является палиндромом: " + result;
+ 
+            Console.WriteLine(message);
+            File.WriteAllText(filePath, message);
+ 
+            Console.ReadKey();
+ 
+        }
+    }
+}
