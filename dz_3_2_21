@@ -1,9 +1,9 @@
-int a1 = Coordinate("x", "A");
-int b1 = Coordinate("y", "A");
-int c1 = Coordinate("z", "A");
-int a2 = Coordinate("x", "B");
-int b2 = Coordinate("y", "B");
-int c2 = Coordinate("z", "B");
+int a1 = Coordinate("a", "A");
+int b1 = Coordinate("b", "A");
+int c1 = Coordinate("c", "A");
+int a2 = Coordinate("a", "B");
+int b2 = Coordinate("b", "B");
+int c2 = Coordinate("c", "B");
 
 int Coordinate(string coorName, string pointName)
 {
