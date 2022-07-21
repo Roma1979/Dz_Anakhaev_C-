@@ -1,24 +1,31 @@
-int a1 = Coordinate("a", "A");
-int b1 = Coordinate("b", "A");
-int c1 = Coordinate("c", "A");
-int a2 = Coordinate("a", "B");
-int b2 = Coordinate("b", "B");
-int c2 = Coordinate("c", "B");
-
-int Coordinate(string coorName, string pointName)
+using System;
+ 
+class GFG
 {
-    Console.Write($"Введите координату {coorName} точки {pointName}: ");
-    return Convert.ToInt16(Console.ReadLine());
+     
+static void distance(float x1, float y1,
+                     float z1, float x2,
+                     float y2, float z2)
+{
+    double d = Math.Pow((Math.Pow(x2 - x1, 2) +
+                         Math.Pow(y2 - y1, 2) +
+                         Math.Pow(z2 - z1, 2) *
+                                   1.0), 0.5);
+    Console.WriteLine("Distance is \n" + d);
+    return;
 }
-
-double Decision(double a1, double a2, 
-                double b1, double b2, 
-                double c1, double c2){
-  return Math.Sqrt(Math.Pow((a2-a1), 2) + 
-                   Math.Pow((b2-b1), 2) + 
-                   Math.Pow((c2-c1), 2));
+ 
+public static void Main()
+{
+    float x1 = 2;
+    float y1 = -5;
+    float z1 = 7;
+    float x2 = 3;
+    float y2 = 4;
+    float z2 = 5;
+     
+    distance(x1, y1, z1,
+             x2, y2, z2);
 }
-
-double segmentLength =  Math.Round (Decision(a1, a2, b1, b2, c1, c2), 2 );
-
-Console.WriteLine($"Длина отрезка  {segmentLength}");
+}
+ 
