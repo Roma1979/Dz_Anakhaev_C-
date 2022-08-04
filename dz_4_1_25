@@ -1,0 +1,25 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    Console.Write("Введите переменную A ");
+int a = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите переменную B ");
+    int b = Convert.ToInt32(Console.ReadLine());
+    int b2 = b;
+            int a2 = a;
+            Console.Write(a);
+    while (b > 1)
+    {
+      b = b - 1;
+      a = a * a2;
+      Console.WriteLine(a);
+    }
+      
+            
+            Console.WriteLine(" в степени " + b2 + " = " + a);
+
+         
+  }
+}
